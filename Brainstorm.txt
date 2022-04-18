@@ -1,0 +1,122 @@
+STEP 1 APP:
+•	User can sign in the app with an email and password
+•	Users can create recipes with ingredients and instructions
+•	Recipes can be marked as public or private
+•	Users can view other people’s recipes
+•	Ingredients from recipes can be added to users’ grocery lists
+•	Users can create their own occasions and assign recipes to occasions
+ 
+BRAINSTORM:
+•	Access
+•	Users
+•	Likes
+•	Loved
+•	dislike
+•	Comments
+•	Grocery list
+•	Recipes
+•	Ingredient list
+•	occasions
+•	Ingredients
+
+STEP 2 TABLE Columns:
+•	Access : 
+this personal log in for the user that will be accessing the app and his account.
+1.	User_id
+2.	Email
+3.	Password
+4.	DOB
+5.	Phone number
+
+
+•	Users:
+This will be personal info of the user and profile.
+1.	User id 
+2.	Username : this will be unique
+3.	First name
+4.	Last name
+5.	Username
+6.	Picture
+
+
+•	likes: People can rate if they like it, love it or dislike the recipes
+1.	Like id
+2.	User id
+3.	Recipe id
+
+
+•	loves:
+1.	Loved id
+2.	User id
+3.	Recipe id
+
+
+•	Dislike:
+1.	Dislike id
+2.	User id
+3.	Recipe id
+
+
+•	comments: Users can comment about recipes and ask questions in the comments
+1.	Comment id
+2.	Comment body
+3.	User id
+4.	Recipe id : what recipe is being commented on
+
+
+•	Grocery List:
+1.	Grocery list id : this clarifies the list of groceries
+2.	User id : who made the list
+3.	Date created :  when it was created
+4.	Recipe id: this can reference recipes
+5.	Ingredient  list id : list of ingredients needed
+6.	quantity : how much is needed
+
+
+•	Recipes:
+1.	User id : who made the recipe
+2.	Recipe id : this separates and clarifies different recipes
+3.	Date posted :
+4.	Recipe content : 
+5.	Recipe instructions
+6.	Private
+7.	public
+8.	Occasion id We can reference occasions recipes
+9.	Picture
+10.	Rating: users can rate how they like the recipe
+
+
+•	Ingredient List:
+1.	Recipe id
+2.	List id
+3.	Ingredient id
+4.	Quantity
+
+
+•	Occasion:
+1.	Creator: who created the content
+2.	Occasion id
+3.	Name
+4.	Date start
+5.	Date end
+6.	text 
+
+•	Ingredients: we can list reference ingredients
+1.	Ingredient id
+2.	Ingredient name
+3.	price
+
+STEP 3 RELATIONSHIPS
+1.	“one-to-one”
+•	Users to Access
+2.	“one-to-many”
+•	Users to grocery list
+•	Users to comments
+•	Users to recipes
+•	Users to occasions
+•	Ingredients to grocery list
+
+3.	“many-to-many”
+•	Groceries list to recipes
+•	Recipes to occasions
+•	Ingredients to recipes
